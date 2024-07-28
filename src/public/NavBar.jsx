@@ -6,21 +6,24 @@ import { useState } from "react";
 import "./public.css";
 
 const NavBar = () => {
-  const links = [
+  // Define navigation links with their respective destinations
+  const navLinks = [
     { name: "Home", to: "/" },
     { name: "Products", to: "products" },
     { name: "Contact", to: "contact" },
     { name: "Policies", to: "policies" },
   ];
-
+  // State to manage the active link
   const [activeLink, setActiveLink] = useState("home");
 
+  // Function to update the active link based on user interaction
   const handleActiveLink = (linkName) => {
     setActiveLink(linkName);
   };
 
   return (
     <>
+      {/* Navigation bar structure */}
       <nav className="header">
         <div className="navbar-container">
           <div className="logo">
@@ -31,7 +34,7 @@ const NavBar = () => {
 
           <div className="nav-Links">
             <ul>
-              {links.map(({ name, to }, index) => (
+              {navLinks.map(({ name, to }, index) => (
                 <li key={index}>
                   <Link
                     to={to}

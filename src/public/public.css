@@ -43,8 +43,12 @@
   opacity: 0;
   transition: 0.6s ease;
 }
+.navbar-container .nav-Links .nav-link.active {
+  color: var(--accent-color);
+}
 
-.navbar-container .nav-Links .nav-link:hover::after {
+.navbar-container .nav-Links .nav-link:hover::after,
+.navbar-container .nav-Links .nav-link.active::after {
   opacity: 1;
   bottom: -0.9em;
 }
