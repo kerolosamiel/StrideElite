@@ -1,3 +1,8 @@
+nav {
+  background-color: var(--hero-background);
+  transition: 0.6s ease;
+}
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -29,14 +34,14 @@
 
 .navbar-container .nav-Links .nav-link::after {
   content: "";
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.4em;
+  height: 0.4em;
   background-color: var(--accent-color);
   position: absolute;
   border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -0.5em;
+  bottom: -0.4em;
   box-shadow: 0 0 10px var(--accent-color), 0 0 5px var(--accent-color),
     0 0 20px var(--accent-color), 0 0 10px var(--accent-color),
     0 0 30px var(--accent-color), 0 0 50px var(--accent-color);
@@ -50,7 +55,7 @@
 .navbar-container .nav-Links .nav-link:hover::after,
 .navbar-container .nav-Links .nav-link.active::after {
   opacity: 1;
-  bottom: -0.9em;
+  bottom: -0.8em;
 }
 
 .navbar-container .nav-Links .nav-icons {
