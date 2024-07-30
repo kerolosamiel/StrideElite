@@ -6,21 +6,9 @@ import { RiArrowLeftWideFill, RiArrowRightWideFill } from "react-icons/ri";
 
 const Hero = () => {
   const heroData = [
-    {
-      title: "NIKE",
-      img: Nike,
-      color: "#7b1e27",
-    },
-    {
-      title: "GUCCI",
-      img: Gucci,
-      color: "#a57757",
-    },
-    {
-      title: "LACOSTE",
-      img: Lacoste,
-      color: "#313246",
-    },
+    { title: "NIKE", img: Nike, color: "#7b1e27" },
+    { title: "GUCCI", img: Gucci, color: "#a57757" },
+    { title: "LACOSTE", img: Lacoste, color: "#313246" },
   ];
 
   const [index, setIndex] = useState(0);

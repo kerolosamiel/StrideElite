@@ -15,7 +15,11 @@ const NavBar = () => {
     { name: "Policies", to: "policies" },
   ];
   // State to manage the active link
-  const [activeLink, setActiveLink] = useState("home");
+  const [activeLink, setActiveLink] = useState(
+    window.location.pathname === "/"
+      ? "home"
+      : window.location.pathname.substring(1)
+  );
   const [checkClick, setCheckClick] = useState(false);
 
   // Function to update the active link based on user interaction
