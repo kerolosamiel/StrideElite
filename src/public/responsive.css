@@ -6,7 +6,7 @@
   .navbar-container .nav-Links {
     position: absolute;
     right: 0;
-    top: 100%;
+    top: 125%;
     flex-direction: column;
     width: 25em;
     height: 0;
@@ -33,5 +33,20 @@
 
   .navbar-container .nav-Links.active {
     height: 21em;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container .nav-Links {
+    width: 15em;
+  }
+
+  .navbar-container .logo {
+    width: 150px;
+    height: 40px;
+  }
+
+  .header {
+    --spacing-large: 1.5em;
   }
 }
