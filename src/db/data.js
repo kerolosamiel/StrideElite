@@ -129,6 +129,32 @@ const data = [
     price: 760,
     discount: 15,
   },
+  {
+    id: 11,
+    company: "Nike",
+    category: "sneakers",
+    gender: ["men", "women"],
+    img: require("../assets/shoes/Nike/sneakers/jordan1.jpg"),
+    title: "Nike Air Jordan",
+    color: ["brown", "beige", "white"],
+    size: [38, 39, 40, 41, 42, 43],
+    itemsNumber: 10,
+    price: 200,
+    discount: 10,
+  },
+  {
+    id: 12,
+    company: "Converse",
+    category: "sneakers",
+    gender: ["women"],
+    img: require("../assets/shoes/Converse/sneakers1.jpg"),
+    title: "Converse Chuck Taylor All Star",
+    color: ["red", "white", "gold"],
+    size: [36, 37, 38, 39, 40, 41, 42, 43],
+    itemsNumber: 15,
+    price: 150,
+    discount: 5,
+  },
 ];
 
 export default data;
