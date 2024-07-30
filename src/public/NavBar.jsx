@@ -4,6 +4,7 @@ import { GoHeart } from "react-icons/go";
 import { IoMdCart } from "react-icons/io";
 import { useState } from "react";
 import "./public.css";
+import "./responsive.css";
 
 const NavBar = () => {
   // Define navigation links with their respective destinations
@@ -15,16 +16,38 @@ const NavBar = () => {
   ];
   // State to manage the active link
   const [activeLink, setActiveLink] = useState("home");
+  const [checkClick, setCheckClick] = useState(false);
 
   // Function to update the active link based on user interaction
   const handleActiveLink = (linkName) => {
     setActiveLink(linkName);
   };
 
+  const handleBurgerClick = () => {
+    if (!checkClick) {
+      setCheckClick(true);
+    } else {
+      setCheckClick(false);
+    }
+  };
+
   return (
     <>
       {/* Navigation bar structure */}
-      <nav className="header">
+      <nav
+        className="header"
+        style={
+          activeLink === "home"
+            ? {
+                backgroundColor: "var(--hero-background)",
+                transition: "0.6s ease",
+              }
+            : {
+                backgroundColor: "var(--background-color)",
+                transition: "unset",
+              }
+        }
+      >
         <div className="navbar-container">
           <div className="logo">
             <Link to={"/"}>
@@ -32,7 +55,16 @@ const NavBar = () => {
             </Link>
           </div>
 
-          <div className="nav-Links">
+          <div
+            className={checkClick ? "burger-icon active" : "burger-icon"}
+            onClick={handleBurgerClick}
+          >
+            <div className="lines line-one"></div>
+            <div className="lines line-two"></div>
+            <div className="lines line-three"></div>
+          </div>
+
+          <div className={checkClick ? "nav-Links active" : "nav-Links"}>
             <ul>
               {navLinks.map(({ name, to }, index) => (
                 <li key={index}>

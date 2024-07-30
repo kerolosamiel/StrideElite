@@ -1,0 +1,11 @@
+@media (min-width: 1440px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 2000px) {
+  body {
+    font-size: 28px;
+  }
+}

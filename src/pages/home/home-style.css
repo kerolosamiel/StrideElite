@@ -17,10 +17,10 @@
   height: 100dvh;
 }
 
-.hero-container .slides img {
+.hero-container .slides .img {
   position: relative;
   z-index: 5;
-  max-width: 500px;
+  width: 32em;
   transform: rotate(-25deg) translateX(-10%);
   filter: drop-shadow(5px 10px 15px #000);
 }
@@ -45,8 +45,8 @@
 }
 .hero-container .slides .title .circle {
   position: absolute;
-  width: 450px;
-  height: 450px;
+  width: 29em;
+  height: 29em;
   background-color: var(--primary-color);
   border-radius: 50%;
   left: 50%;
@@ -79,9 +79,9 @@
 }
 
 .hero-container .slides button.left {
-  left: 5%;
+  left: 1%;
 }
 
 .hero-container .slides button.right {
-  right: 5%;
+  right: 1%;
 }
