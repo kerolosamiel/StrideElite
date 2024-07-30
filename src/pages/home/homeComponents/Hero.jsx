@@ -25,7 +25,6 @@ const Hero = () => {
 
   const increaseIndex = () => {
     if (index < 2) {
-      setIndex(index + 1);
     } else if (index === 2) {
       setIndex(0);
     }
