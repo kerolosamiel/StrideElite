@@ -2,7 +2,6 @@ import Nike from "../../../assets/hr-jordan.png";
 import Gucci from "../../../assets/hr-gucci.png";
 import Lacoste from "../../../assets/hr-lacoste.png";
 import { useEffect, useState } from "react";
-import { RiArrowLeftWideFill, RiArrowRightWideFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -23,20 +22,14 @@ const Hero = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
 
-  const increaseIndex = () => {
-    if (index < 2) {
-    } else if (index === 2) {
+  setTimeout(() => {
+    setIndex(index + 1);
+
+    if (index === 2) {
       setIndex(0);
     }
-  };
+  }, 5000);
 
-  const decreaseIndex = () => {
-    if (index > 0) {
-      setIndex(index - 1);
-    } else if (index === 0) {
-      setIndex(2);
-    }
-  };
   return (
     <section className="hero">
       <div className="hero-container">
@@ -77,14 +70,6 @@ const Hero = () => {
               transition={{ ease: "easeInOut", duration: 0.3 }}
             ></motion.div>
           </div>
-
-          <button onClick={increaseIndex} className="right">
-            <RiArrowRightWideFill />
-          </button>
-
-          <button onClick={decreaseIndex} className="left">
-            <RiArrowLeftWideFill />
-          </button>
         </div>
       </div>
     </section>
