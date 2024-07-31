@@ -21,7 +21,6 @@
   position: relative;
   z-index: 5;
   width: 32em;
-  transform: rotate(-25deg) translateX(-10%);
   filter: drop-shadow(5px 10px 15px #000);
 }
 
@@ -32,7 +31,6 @@
   font-weight: 900;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
   color: var(--accent-color);
   z-index: 1;
 }
@@ -55,7 +53,6 @@
   z-index: 0;
   box-shadow: 0 0 50px var(--primary-color);
   filter: blur(20px);
-  opacity: 0.5;
 }
 
 .hero-container .slides .buttons {
