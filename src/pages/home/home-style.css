@@ -1,0 +1,252 @@
+/* Hero Section */
+.hero-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--hero-background);
+  min-height: 100dvh;
+  width: 100%;
+  transition: 0.6s ease;
+  overflow-x: clip;
+}
+
+.hero-container .slides {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100dvh;
+}
+
+.hero-container .slides .img {
+  position: relative;
+  z-index: 5;
+  width: 32em;
+  filter: drop-shadow(5px 10px 15px #000);
+}
+
+.hero-container .slides .title img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 70%;
+  height: 90%;
+}
+
+.hero-container .slides .title .circle {
+  position: absolute;
+  width: 29em;
+  height: 29em;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  box-shadow: 0 0 50px var(--primary-color);
+  filter: blur(20px);
+}
+
+.hero-container .slides .buttons {
+  display: flex;
+  position: absolute;
+  gap: 1.5em;
+}
+
+.hero-container .slides button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: unset;
+  background: transparent;
+  color: var(--secondary-color);
+  font-size: 6em;
+  padding: 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container .slides button.left {
+  left: 1%;
+}
+
+.hero-container .slides button.right {
+  right: 1%;
+}
+
+.hero-container .newsbar .lines {
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  width: 110%;
+  left: -5%;
+  bottom: -7%;
+  z-index: 9;
+}
+
+.hero-container .newsbar .lines p {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.hero-container .newsbar .lines.line1 {
+  background: var(--sneutral-color);
+  transform: rotate(3deg);
+  z-index: 10;
+}
+
+.hero-container .newsbar .lines.line2 {
+  background: var(--neutral-color);
+  transform: rotate(-3deg);
+}
+
+/* Feature section */
+.feature {
+  margin: 15em 0;
+}
+
+.feature-container {
+  display: flex;
+  gap: 3em;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.feature-container .img {
+  width: 50%;
+  position: relative;
+}
+
+.feature-container .img img {
+  transform: rotate(40deg);
+}
+
+.feature-container .img .highlight {
+  position: absolute;
+  left: calc(-25% - 8em);
+  top: 4em;
+  transform: rotate(-90deg) scaleY(1.5);
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.feature-container .img .highlight h2 {
+  font-size: 8em;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--accent-color);
+}
+
+.feature-container .info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5em;
+  justify-content: center;
+}
+
+.feature-container .info .title h3 {
+  -webkit-text-stroke: 1px var(--accent-color);
+  font-size: 2.5em;
+  color: transparent;
+}
+
+.feature-container .info .title h1 {
+  font-size: 3.5em;
+  transform: scaleY(1.5);
+  margin: 0.3em 0 0;
+}
+
+.feature-container .info .text-bx {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.feature-container .info .text-bx p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+}
+
+.feature-container .info .text-bx a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: var(--spacing-medium) var(--spacing-large);
+  gap: 1em;
+}
+
+/* Products section */
+.products-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  justify-content: center;
+  align-content: center;
+}
+
+.products-container .line {
+  width: 70%;
+  height: 0.2em;
+  border-radius: 1.6em;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent-color),
+    transparent
+  );
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+.products-container .title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.products-container .title h1 {
+  font-size: var(--headers-size);
+}
+
+.products-container .title h3 {
+  color: var(--accent-color);
+  font-size: var(--sub-headers-size);
+  font-weight: 400;
+  letter-spacing: 1px;
+  opacity: 0.4;
+}
+
+.products-container .products-show {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-container .products-show .buttons {
+  width: fit-content;
+  gap: 2em;
+  display: flex;
+}
+
+.products-container .products-show .products-bx {
+  display: flex;
+  gap: 2.5em;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 5em;
+  min-height: 50dvh;
+  flex-wrap: wrap;
+}

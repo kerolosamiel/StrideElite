@@ -1,0 +1,151 @@
+.product {
+  width: calc((100% - 5em) / 3);
+  background: var(--neutral-color);
+  padding: 1.5em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.product .image {
+  position: relative;
+}
+
+.product .image img {
+  border-radius: 1em;
+  aspect-ratio: 3/3;
+  background: #fff;
+}
+
+.product .image .colors {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  right: 3%;
+  top: 3%;
+  cursor: pointer;
+  height: 2em;
+  width: 1.2em;
+}
+
+.product .image .colors .color {
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  transition: 0.3s ease;
+  filter: drop-shadow(0px 0px 1px var(--secondary-color));
+  z-index: 12;
+}
+
+.product .image .colors .arrow {
+  width: 100%;
+  height: 1em;
+  position: absolute;
+  color: var(--secondary-color);
+  top: 1.2em;
+  transition: 0.3s ease;
+  z-index: 8;
+}
+
+.product .image .colors:hover .arrow {
+  opacity: 0;
+}
+
+.product .image .colors:hover .color:nth-child(2) {
+  top: calc(1.2em + 0.5em);
+}
+
+.product .image .colors:hover .color:nth-child(3) {
+  top: calc((1.2em * 2) + (0.5em * 2));
+}
+
+.product .image .colors:hover .color:nth-child(4) {
+  top: calc((1.2em * 3) + (0.5em * 3));
+}
+
+.product .image .colors:hover .color:nth-child(5) {
+  top: calc((1.2em * 4) + (0.5em * 4));
+}
+
+.product .image .colors .arrow svg {
+  width: 100%;
+}
+
+.product .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.product .info .cont {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.product .info .title {
+  text-align: center;
+}
+
+.product .info .more-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product .info .more-info .price p:nth-child(1) {
+  font-size: 1.3em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--accent-color);
+}
+
+.product .info .more-info .price p.discount {
+  text-decoration: line-through;
+  color: var(--primary-color);
+}
+
+.product .info .more-info .rate {
+  display: flex;
+  gap: 0.2em;
+  font-size: 1.1em;
+}
+
+.product .info .more-info .rate svg {
+  color: var(--text-color);
+}
+
+.product .info .more-info .rate svg.active {
+  color: var(--star-color);
+}
+
+.product .info .buttons {
+  width: 100%;
+}
+
+.product .info .buttons .fav-button {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.product .info .buttons .fav-button svg {
+  font-size: 1.3em;
+}
+
+.product .info .buttons .button {
+  width: calc(100% - 6em);
+  justify-content: center;
+  align-items: center;
+}

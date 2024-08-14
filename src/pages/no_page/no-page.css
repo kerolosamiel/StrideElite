@@ -1,0 +1,21 @@
+.nopage-container {
+  padding: 3em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  text-align: center;
+}
+
+.nopage-container .title h1 {
+  font-size: 8em;
+  font-weight: 900;
+  margin-bottom: 0.1em;
+  color: var(--accent-color);
+  opacity: 0.4;
+  filter: drop-shadow(2px 2px 6px var(--accent-color));
+}
+
+.nopage-container p {
+  width: 50%;
+}

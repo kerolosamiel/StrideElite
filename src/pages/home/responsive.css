@@ -1,0 +1,9 @@
+@media (max-width: 991px) {
+  .hero-container .slides .img {
+    width: 27em;
+  }
+
+  .hero-container .slides .title h1 {
+    font-size: 11em;
+  }
+}
