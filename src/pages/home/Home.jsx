@@ -1,10 +1,13 @@
 import "./home-style.css";
 import Hero from "./homeComponents/Hero";
 import ShowProducts from "./homeComponents/ShowProducts";
+import Options from "./homeComponents/Options";
 import "./responsive.css";
 import AirJordan from "../../assets/air-jordan.png";
 import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Men from "../../assets/men.jpg";
+import Women from "../../assets/women.png";
 
 const Home = () => {
   return (
@@ -58,6 +61,24 @@ const Home = () => {
           <div className="line"></div>
 
           <ShowProducts />
+        </div>
+      </section>
+
+      {/* Options setion */}
+      <section className="optio">
+        <div className="options-container">
+          <Options
+            img={Men}
+            alt="Men shoes"
+            title="Men shoes"
+            to="products/men"
+          />
+          <Options
+            img={Women}
+            alt="Women shoes"
+            title="Women Shoes"
+            to="products/women"
+          />
         </div>
       </section>
     </>

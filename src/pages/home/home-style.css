@@ -250,3 +250,40 @@
   min-height: 50dvh;
   flex-wrap: wrap;
 }
+
+/* Options section */
+.options-container {
+  width: 90%;
+  margin: 4em auto;
+  display: flex;
+  gap: 2em;
+}
+
+.options-container .option {
+  width: calc(50% - 1em);
+  background: #000000;
+  border-radius: 2em;
+  position: relative;
+  border: 2px solid var(--accent-color);
+}
+
+.options-container .option img {
+  border-radius: 2em;
+}
+
+.options-container .option a {
+  font-size: 1.4em;
+  letter-spacing: 0.5px;
+  position: absolute;
+  left: 50%;
+  bottom: -1.5em;
+  transform: translateX(-50%);
+  height: 3em;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  border: 2px solid var(--accent-color);
+  background-color: var(--neutral-color);
+}
