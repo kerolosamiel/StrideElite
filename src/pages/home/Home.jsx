@@ -65,7 +65,7 @@ const Home = () => {
       </section>
 
       {/* Options setion */}
-      <section className="optio">
+      <section className="options">
         <div className="options-container">
           <Options
             img={Men}
@@ -79,6 +79,23 @@ const Home = () => {
             title="Women Shoes"
             to="products/women"
           />
+        </div>
+      </section>
+
+      {/* Subscribe section */}
+      <section className="subscribe">
+        <div className="subscribe-container">
+          <h2>Subscribe our newsletter</h2>
+
+          <form>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+            />
+            <button className="button">Subscribe</button>
+          </form>
         </div>
       </section>
     </>

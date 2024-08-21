@@ -254,7 +254,7 @@
 /* Options section */
 .options-container {
   width: 90%;
-  margin: 4em auto;
+  margin: 6em auto;
   display: flex;
   gap: 2em;
 }
@@ -286,4 +286,39 @@
   border-radius: 2em;
   border: 2px solid var(--accent-color);
   background-color: var(--neutral-color);
+}
+
+.subscribe {
+  margin: 10em 0 3em;
+}
+
+.subscribe .subscribe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 0;
+  background: var(--sneutral-color);
+}
+
+.subscribe-container h2 {
+  font-size: 2.4em;
+  letter-spacing: 0.5px;
+}
+
+.subscribe-container form {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8em;
+  width: 50%;
+  background: var(--neutral-color);
+  border: 1px solid var(--accent-color);
+}
+
+.subscribe-container form input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--text-color);
 }
