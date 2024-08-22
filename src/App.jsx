@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./public/NavBar";
+import Footer from "./public/Footer";
 import Home from "./pages/home/Home";
 import NoPage from "./pages/no_page/NoPage";
 import { useState } from "react";
@@ -27,6 +28,7 @@ function App() {
           element={<NoPage handleActiveLink={handleActiveLink} />}
         />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
