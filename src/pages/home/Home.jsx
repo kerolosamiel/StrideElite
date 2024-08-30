@@ -9,7 +9,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Men from "../../assets/men.jpg";
 import Women from "../../assets/women.png";
 
-const Home = () => {
+const Home = ({ handleActiveLink }) => {
   return (
     <>
       {/* Hero Section */}
@@ -40,7 +40,11 @@ const Home = () => {
                 their simplicity, supporting your feet with absolute comfert.
               </p>
 
-              <Link to={"products"} className="button">
+              <Link
+                to={"products"}
+                className="button"
+                onClick={() => handleActiveLink("products")}
+              >
                 Explore More
                 <FaArrowRightLong />
               </Link>
@@ -72,12 +76,14 @@ const Home = () => {
             alt="Men shoes"
             title="Men shoes"
             to="products/men"
+            handleActiveLink={handleActiveLink}
           />
           <Options
             img={Women}
             alt="Women shoes"
             title="Women Shoes"
             to="products/women"
+            handleActiveLink={handleActiveLink}
           />
         </div>
       </section>

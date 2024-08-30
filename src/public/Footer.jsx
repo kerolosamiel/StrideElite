@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdCopyright } from "react-icons/md";
 
-const Footer = () => {
+const Footer = ({ handleActiveLink }) => {
   // Define links with their respective destinations
   const links = [
     { name: "Home", to: "/" },
@@ -29,7 +29,12 @@ const Footer = () => {
             <ul>
               {links.map(({ name, to }, index) => (
                 <li key={index}>
-                  <Link to={to}>{name}</Link>
+                  <Link
+                    to={to}
+                    onClick={() => handleActiveLink(name.toLowerCase())}
+                  >
+                    {name}
+                  </Link>
                 </li>
               ))}
             </ul>

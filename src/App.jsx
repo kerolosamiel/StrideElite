@@ -22,13 +22,16 @@ function App() {
     <BrowserRouter>
       <NavBar activeLink={activeLink} handleActiveLink={handleActiveLink} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home handleActiveLink={handleActiveLink} />}
+        />
         <Route
           path="*"
           element={<NoPage handleActiveLink={handleActiveLink} />}
         />
       </Routes>
-      <Footer />
+      <Footer handleActiveLink={handleActiveLink} />
     </BrowserRouter>
   );
 }
