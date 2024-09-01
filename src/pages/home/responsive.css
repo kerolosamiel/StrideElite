@@ -1,9 +1,171 @@
 @media (max-width: 991px) {
+  .hero-container .slides {
+    height: unset;
+  }
+
+  .hero-container {
+    min-height: 60vh;
+  }
+
   .hero-container .slides .img {
     width: 27em;
   }
 
+  .hero-container .slides .title img {
+    width: 95%;
+  }
+
   .hero-container .slides .title h1 {
     font-size: 11em;
+  }
+
+  .feature {
+    margin: 6em 0;
+  }
+
+  .feature-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15em auto 0;
+  }
+
+  .feature-container .img {
+    width: 80%;
+  }
+
+  .feature-container .info {
+    width: 100%;
+    margin-top: 7em;
+  }
+
+  .product {
+    width: 350px;
+  }
+
+  .options-container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+  }
+
+  .options-container .option {
+    width: 90%;
+  }
+
+  .subscribe-container form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 720px) {
+  .footer-container .top {
+    justify-content: center;
+  }
+
+  .feature-container .img .highlight h2 {
+    font-size: 6em;
+  }
+
+  .feature {
+    text-align: center;
+  }
+
+  .feature-container .info .title h1 {
+    font-size: 2.5em;
+  }
+
+  .feature-container .info .text-bx {
+    align-items: center;
+  }
+
+  .options-container .option {
+    width: 100%;
+  }
+
+  .options-container .option a {
+    width: 65%;
+  }
+
+  .subscribe-container h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 560px) {
+  .subscribe-container form {
+    width: 95% !important;
+  }
+
+  .hero-container .slides .img {
+    width: 95%;
+  }
+
+  .feature-container .img .highlight {
+    left: -50%;
+  }
+
+  .feature-container .img {
+    width: 100%;
+  }
+
+  .subscribe-container h2 {
+    font-size: 1.6em;
+  }
+
+  .subscribe-container .button {
+    padding: 0.5em 1.5em;
+  }
+}
+
+@media (max-width: 400px) {
+  .product {
+    width: 100%;
+  }
+
+  .feature-container {
+    width: 90%;
+  }
+
+  .feature-container .info .title h3 {
+    font-size: 2em;
+  }
+
+  .feature-container .info .title h1 {
+    font-size: 2em;
+  }
+
+  .products-container .title h1 {
+    font-size: 2em;
+  }
+
+  .products-container .title h3 {
+    font-size: 1.2em;
+  }
+
+  .products-container .line {
+    width: 100%;
+  }
+
+  .products-container {
+    gap: 1.7em;
+  }
+
+  .subscribe-container form input {
+    width: 60%;
+  }
+
+  .subscribe-container .button {
+    width: 40%;
+  }
+
+  .feature {
+    overflow: hidden;
+  }
+
+  .hero-container .slides .title .circle {
+    width: 300px;
+    height: 300px;
   }
 }
