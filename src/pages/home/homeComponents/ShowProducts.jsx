@@ -1,9 +1,8 @@
 import { useState } from "react";
 import ProductCard from "../../../components/ProductCard/ProductCard";
 import data from "../../../db/data";
-import { motion, AnimatePresence } from "framer-motion";
 
-const ShowProducts = () => {
+const ShowProducts = ({ handleFavClick }) => {
   const companies = ["Nike", "Converse", "Adidas", "Lacoste"];
   const [category, setCategory] = useState("Nike");
 
@@ -30,21 +29,21 @@ const ShowProducts = () => {
         ))}
       </div>
 
-      <motion.div className="products-bx">
-        <AnimatePresence>
-          {products(category).map((product) => (
-            <ProductCard
-              img={product.img}
-              title={product.title}
-              price={product.price}
-              discount={product.discount}
-              rate={product.rate}
-              colors={product.color}
-              key={`product-${Math.random()}`}
-            />
-          ))}
-        </AnimatePresence>
-      </motion.div>
+      <div className="products-bx">
+        {products(category).map((product) => (
+          <ProductCard
+            id={product.id}
+            img={product.img}
+            title={product.title}
+            price={product.price}
+            discount={product.discount}
+            rate={product.rate}
+            colors={product.color}
+            key={`product-${Math.random()}`}
+            handleFavClick={handleFavClick}
+          />
+        ))}
+      </div>
     </div>
   );
 };

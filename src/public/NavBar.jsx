@@ -77,8 +77,18 @@ const NavBar = ({ activeLink, handleActiveLink }) => {
             </ul>
 
             <div className="nav-icons">
-              <GoHeart />
-              <IoMdCart />
+              <Link
+                to="saved"
+                onClick={() => handleActiveLink(name.toLowerCase())}
+              >
+                <GoHeart />
+              </Link>
+              <Link
+                to="cart"
+                onClick={() => handleActiveLink(name.toLowerCase())}
+              >
+                <IoMdCart />
+              </Link>
             </div>
           </div>
         </div>

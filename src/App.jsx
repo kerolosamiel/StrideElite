@@ -14,6 +14,14 @@ function App() {
       : window.location.pathname.substring(1)
   );
 
+  const [saveIDs, setSaveIDs] = useState([]);
+
+  const handleFavClick = (id) => {
+    if (!saveIDs.includes(id, 0)) {
+      setSaveIDs([...saveIDs, id]);
+    }
+  };
+
   // Function to update the active link based on user interaction
   const handleActiveLink = (linkName) => {
     setActiveLink(linkName);
@@ -25,7 +33,12 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Home handleActiveLink={handleActiveLink} />}
+          element={
+            <Home
+              handleActiveLink={handleActiveLink}
+              handleFavClick={handleFavClick}
+            />
+          }
         />
 
         <Route path="products" element={<Products />} />

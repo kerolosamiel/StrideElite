@@ -9,7 +9,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Men from "../../assets/men.jpg";
 import Women from "../../assets/women.png";
 
-const Home = ({ handleActiveLink }) => {
+const Home = ({ handleActiveLink, handleFavClick }) => {
   return (
     <>
       {/* Hero Section */}
@@ -64,7 +64,7 @@ const Home = ({ handleActiveLink }) => {
 
           <div className="line"></div>
 
-          <ShowProducts />
+          <ShowProducts handleFavClick={handleFavClick} />
         </div>
       </section>
 

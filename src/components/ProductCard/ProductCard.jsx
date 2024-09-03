@@ -5,7 +5,16 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
-function ProductCard({ img, title, price, discount, rate, colors }) {
+function ProductCard({
+  id,
+  img,
+  title,
+  price,
+  discount,
+  rate,
+  colors,
+  handleFavClick,
+}) {
   const [rating, setRating] = useState(["", "", "", "", ""]);
 
   useEffect(() => {
@@ -15,16 +24,7 @@ function ProductCard({ img, title, price, discount, rate, colors }) {
   }, [rate]);
 
   return (
-    <motion.div
-      className="product"
-      layout
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
-      transition={{
-        type: "spring",
-        stiffness: 45,
-      }}
-    >
+    <div className="product">
       <div className="image">
         <img src={img} alt="img" />
 
@@ -64,13 +64,13 @@ function ProductCard({ img, title, price, discount, rate, colors }) {
 
           <div className="buttons">
             <button className="fav-button">
-              <GoHeart />
+              <GoHeart onClick={() => handleFavClick(id)} />
             </button>
             <button className="button">Buy Now</button>
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
