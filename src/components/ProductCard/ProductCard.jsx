@@ -2,7 +2,7 @@ import "./product-card.css";
 import { GoHeart } from "react-icons/go";
 import { FaStar } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 function ProductCard({
@@ -45,7 +45,9 @@ function ProductCard({
 
       <div className="info">
         <div className="title">
-          <h2>{title}</h2>
+          <Link to="product">
+            <h2>{title}</h2>
+          </Link>
         </div>
 
         <div className="cont">

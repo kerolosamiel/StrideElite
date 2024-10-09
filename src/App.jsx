@@ -14,11 +14,11 @@ function App() {
       : window.location.pathname.substring(1)
   );
 
-  const [saveIDs, setSaveIDs] = useState([]);
+  let saveIDs = [];
 
   const handleFavClick = (id) => {
     if (!saveIDs.includes(id, 0)) {
-      setSaveIDs([...saveIDs, id]);
+      saveIDs.push(id);
     }
   };
 

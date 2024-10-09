@@ -93,6 +93,14 @@
   text-align: center;
 }
 
+.product .info .title h2 {
+  transition: 0.6s ease;
+}
+
+.product .info .title h2:hover {
+  color: var(--accent-color);
+}
+
 .product .info .more-info {
   display: flex;
   justify-content: space-between;
