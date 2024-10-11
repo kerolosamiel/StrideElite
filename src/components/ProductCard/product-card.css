@@ -148,6 +148,10 @@
   transition: 0.3s ease;
 }
 
+.product .info .buttons .fav-button.active {
+  background: var(--secondary-color);
+}
+
 .product .info .buttons .fav-button svg {
   font-size: 1.3em;
 }

@@ -123,7 +123,111 @@
 .navbar-container .nav-Links .nav-icons svg {
   font-size: 1.7em;
   cursor: pointer;
+  color: var(--primary-color);
 }
+
+.navbar-container .nav-Links .nav-icons .fav-cont {
+  position: relative;
+}
+
+.navbar-container .nav-Links .nav-icons .fav-cont .fav {
+  position: absolute;
+  width: 30em;
+  right: -4em;
+  top: 2em;
+  max-height: 0;
+  z-index: 999;
+  border-radius: 1.2em;
+  background: var(--neutral-color);
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.6s ease;
+}
+
+.navbar-container .nav-Links .nav-icons .fav-cont:hover .fav {
+  max-height: 28em;
+  opacity: 1;
+  visibility: visible;
+  top: 4em;
+}
+
+.navbar-container .nav-Links .nav-icons .fav-cont .fav::-webkit-scrollbar {
+  width: 0;
+}
+
+.navbar-container .nav-Links .nav-icons .fav-cont .fav .product-box {
+  flex-direction: column;
+  display: flex;
+  gap: 1.5em;
+  padding: 1em;
+}
+
+.navbar-container .nav-Links .nav-icons .fav-cont .fav .fav-product {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 1em;
+  background: brown;
+  border-radius: 1.2em;
+  align-items: center;
+}
+
+.navbar-container .nav-Links .nav-icons .fav-cont .fav .fav-product .info {
+  display: flex;
+  gap: 1em;
+}
+
+.navbar-container .nav-Links .nav-icons .fav-cont .fav .fav-product .img {
+  background: #fff;
+  width: 6.25em;
+}
+
+.navbar-container .nav-Links .nav-icons .fav-cont .fav .fav-product .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.navbar-container
+  .nav-Links
+  .nav-icons
+  .fav-cont
+  .fav
+  .fav-product
+  .text-box
+  h3 {
+  font-size: 1.3em;
+}
+
+.navbar-container
+  .nav-Links
+  .nav-icons
+  .fav-cont
+  .fav
+  .fav-product
+  .text-box
+  .price
+  p:nth-child(1) {
+  font-size: 1.3em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--accent-color);
+}
+
+.navbar-container
+  .nav-Links
+  .nav-icons
+  .fav-cont
+  .fav
+  .fav-product
+  .text-box
+  .price
+  p.discount {
+  text-decoration: line-through;
+  color: var(--primary-color);
+}
+
 /* End Navbar */
 
 /* Footer */

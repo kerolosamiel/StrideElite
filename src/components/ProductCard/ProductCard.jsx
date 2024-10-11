@@ -16,6 +16,17 @@ function ProductCard({
   handleFavClick,
 }) {
   const [rating, setRating] = useState(["", "", "", "", ""]);
+  const [activeSaveP, setActiveSaveP] = useState(false);
+
+  const handleActiveSave = () => {
+    setActiveSaveP((prevActiveSaveP) => !prevActiveSaveP);
+    console.log(activeSaveP);
+  };
+
+  const favButtons = () => {
+    handleActiveSave();
+    handleFavClick(id);
+  };
 
   useEffect(() => {
     setRating((prevRating) => {
@@ -65,8 +76,13 @@ function ProductCard({
           </div>
 
           <div className="buttons">
-            <button className="fav-button">
-              <GoHeart onClick={() => handleFavClick(id)} />
+            <button
+              className={
+                activeSaveP == true ? "fav-button active" : "fav-button"
+              }
+              onClick={favButtons}
+            >
+              <GoHeart />
             </button>
             <button className="button">Buy Now</button>
           </div>

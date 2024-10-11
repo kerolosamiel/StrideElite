@@ -14,11 +14,13 @@ function App() {
       : window.location.pathname.substring(1)
   );
 
-  let saveIDs = [];
+  const [saveIDs, setSaveIDs] = useState([]);
 
   const handleFavClick = (id) => {
     if (!saveIDs.includes(id, 0)) {
-      saveIDs.push(id);
+      setSaveIDs([...saveIDs, id]);
+    } else if (saveIDs.includes(id, 0)) {
+      setSaveIDs(saveIDs.filter((ids) => ids !== id));
     }
   };
 
@@ -29,7 +31,12 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar activeLink={activeLink} handleActiveLink={handleActiveLink} />
+      <NavBar
+        activeLink={activeLink}
+        handleActiveLink={handleActiveLink}
+        saveIDs={saveIDs}
+      />
+
       <Routes>
         <Route
           path="/"

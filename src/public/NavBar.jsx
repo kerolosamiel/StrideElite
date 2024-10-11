@@ -3,10 +3,11 @@ import { Outlet, Link } from "react-router-dom";
 import { GoHeart } from "react-icons/go";
 import { IoMdCart } from "react-icons/io";
 import { useState } from "react";
+import data from "../db/data";
 import "./public.css";
 import "./responsive.css";
 
-const NavBar = ({ activeLink, handleActiveLink }) => {
+const NavBar = ({ activeLink, handleActiveLink, saveIDs }) => {
   // Define navigation links with their respective destinations
   const navLinks = [
     { name: "Home", to: "/" },
@@ -22,6 +23,10 @@ const NavBar = ({ activeLink, handleActiveLink }) => {
     } else {
       setCheckClick(false);
     }
+  };
+
+  const favProducts = (id) => {
+    return data.filter((product) => id.includes(product.id));
   };
 
   return (
@@ -77,12 +82,42 @@ const NavBar = ({ activeLink, handleActiveLink }) => {
             </ul>
 
             <div className="nav-icons">
-              <Link
-                to="saved"
-                onClick={() => handleActiveLink(name.toLowerCase())}
-              >
+              <div className="fav-cont">
                 <GoHeart />
-              </Link>
+                <div className="fav">
+                  <div className="product-box">
+                    {favProducts(saveIDs).map((product, index) => (
+                      <div className="fav-product" key={`fav-${index}`}>
+                        <div className="info">
+                          <div className="img">
+                            <img src={product.img} alt={product.title} />
+                          </div>
+
+                          <div className="text-box">
+                            <h3 className="">{product.title}</h3>
+                            <div className="price">
+                              <p>
+                                $
+                                {(
+                                  product.price -
+                                  (product.price * product.discount) / 100
+                                ).toFixed(2)}
+                              </p>
+                              <p className="discount">
+                                ${product.price.toFixed(2)}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="add-cart">
+                          <IoMdCart />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
               <Link
                 to="cart"
                 onClick={() => handleActiveLink(name.toLowerCase())}
