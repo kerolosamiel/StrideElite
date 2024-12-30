@@ -7,7 +7,7 @@ import { MdCopyright } from "react-icons/md";
 const Footer = ({ handleActiveLink }) => {
   // Define links with their respective destinations
   const links = [
-    { name: "Home", to: "/" },
+    { name: "Home", to: "" },
     { name: "Products", to: "products" },
     { name: "Contact", to: "contact" },
     { name: "Policies", to: "policies" },
@@ -29,10 +29,7 @@ const Footer = ({ handleActiveLink }) => {
             <ul>
               {links.map(({ name, to }, index) => (
                 <li key={index}>
-                  <Link
-                    to={to}
-                    onClick={() => handleActiveLink(name.toLowerCase())}
-                  >
+                  <Link to={to} onClick={() => handleActiveLink(to)}>
                     {name}
                   </Link>
                 </li>
