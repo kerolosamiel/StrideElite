@@ -10,7 +10,7 @@ import "./responsive.css";
 const NavBar = ({ activeLink, handleActiveLink, saveIDs }) => {
   // Define navigation links with their respective destinations
   const navLinks = [
-    { name: "Home", to: "/" },
+    { name: "Home", to: "" },
     { name: "Products", to: "products" },
     { name: "Contact", to: "contact" },
     { name: "Policies", to: "policies" },
@@ -18,11 +18,7 @@ const NavBar = ({ activeLink, handleActiveLink, saveIDs }) => {
   const [checkClick, setCheckClick] = useState(false);
 
   const handleBurgerClick = () => {
-    if (!checkClick) {
-      setCheckClick(true);
-    } else {
-      setCheckClick(false);
-    }
+    setCheckClick(!checkClick);
   };
 
   const favProducts = (id) => {
@@ -35,7 +31,7 @@ const NavBar = ({ activeLink, handleActiveLink, saveIDs }) => {
       <nav
         className="header"
         style={
-          activeLink === "home"
+          activeLink === ""
             ? {
                 backgroundColor: "var(--hero-background)",
                 transition: "0.6s ease",
@@ -48,7 +44,7 @@ const NavBar = ({ activeLink, handleActiveLink, saveIDs }) => {
       >
         <div className="navbar-container">
           <div className="logo">
-            <Link to={"/"} onClick={() => handleActiveLink("home")}>
+            <Link to={""} onClick={() => handleActiveLink("")}>
               <img src={Logo} alt="Logo" />
             </Link>
           </div>
@@ -69,11 +65,9 @@ const NavBar = ({ activeLink, handleActiveLink, saveIDs }) => {
                   <Link
                     to={to}
                     className={
-                      activeLink === name.toLowerCase()
-                        ? "active nav-link"
-                        : "nav-link"
+                      activeLink === to ? "active nav-link" : "nav-link"
                     }
-                    onClick={() => handleActiveLink(name.toLowerCase())}
+                    onClick={() => handleActiveLink(to === "/" ? "" : to)}
                   >
                     {name}
                   </Link>
@@ -118,10 +112,7 @@ const NavBar = ({ activeLink, handleActiveLink, saveIDs }) => {
                   </div>
                 </div>
               </div>
-              <Link
-                to="cart"
-                onClick={() => handleActiveLink(name.toLowerCase())}
-              >
+              <Link to="cart" onClick={() => handleActiveLink("cart")}>
                 <IoMdCart />
               </Link>
             </div>
