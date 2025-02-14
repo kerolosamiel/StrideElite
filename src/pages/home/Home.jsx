@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Men from "../../assets/men.jpg";
 import Women from "../../assets/women.png";
+import Button from "../../components/Buttons/Button";
 
 const Home = ({ handleActiveLink, handleFavClick }) => {
   return (
@@ -100,7 +101,11 @@ const Home = ({ handleActiveLink, handleFavClick }) => {
               id="email"
               placeholder="Enter your email"
             />
-            <button className="button">Subscribe</button>
+            <Button
+              classN="button"
+              content="Subscribe"
+              handleClick={() => console.log("subscribe")}
+            />
           </form>
         </div>
       </section>

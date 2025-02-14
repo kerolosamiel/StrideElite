@@ -1,9 +1,10 @@
 import "./product-card.css";
 import { GoHeart } from "react-icons/go";
 import { FaStar } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import Button from "../Buttons/Button";
 
 function ProductCard({
   id,
@@ -16,17 +17,6 @@ function ProductCard({
   handleFavClick,
 }) {
   const [rating, setRating] = useState(["", "", "", "", ""]);
-  const [activeSaveP, setActiveSaveP] = useState(false);
-
-  const handleActiveSave = () => {
-    setActiveSaveP((prevActiveSaveP) => !prevActiveSaveP);
-    console.log(activeSaveP);
-  };
-
-  const favButtons = () => {
-    handleActiveSave();
-    handleFavClick(id);
-  };
 
   useEffect(() => {
     setRating((prevRating) => {
@@ -76,15 +66,17 @@ function ProductCard({
           </div>
 
           <div className="buttons">
-            <button
-              className={
-                activeSaveP == true ? "fav-button active" : "fav-button"
-              }
-              onClick={favButtons}
-            >
-              <GoHeart />
-            </button>
-            <button className="button">Buy Now</button>
+            <Button
+              classN="fav-button"
+              handleClick={() => handleFavClick(id)}
+              content={<GoHeart />}
+            />
+
+            <Button
+              classN="button"
+              handleClick={() => console.log(id)}
+              content="But Now"
+            />
           </div>
         </div>
       </div>

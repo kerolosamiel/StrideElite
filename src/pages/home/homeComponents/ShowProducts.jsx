@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProductCard from "../../../components/ProductCard/ProductCard";
 import data from "../../../db/data";
+import Button from "../../../components/Buttons/Button";
 
 const ShowProducts = ({ handleFavClick }) => {
   const companies = ["Nike", "Converse", "Adidas", "Lacoste"];
@@ -19,13 +20,12 @@ const ShowProducts = ({ handleFavClick }) => {
     <div className="products-show">
       <div className="buttons">
         {companies.map((company, index) => (
-          <button
-            className="button"
-            key={`buttons-${index}`}
-            onClick={() => categoryHandler(company)}
-          >
-            {company}
-          </button>
+          <Button
+            classN="button"
+            key={`cButton-${index}`}
+            handleClick={() => categoryHandler(company)}
+            content={company}
+          />
         ))}
       </div>
 
