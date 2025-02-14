@@ -14,9 +14,7 @@ const Home = ({ handleActiveLink, handleFavClick }) => {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero">
-        <Hero />
-      </section>
+      <Hero />
 
       {/* Features Section */}
       <section className="feature">

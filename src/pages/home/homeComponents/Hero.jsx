@@ -31,58 +31,60 @@ const Hero = () => {
   }, 5000);
 
   return (
-    <div className="hero-container">
-      <div className="slides">
-        <motion.div
-          className="img"
-          key={`img-${index}`}
-          initial={{ opacity: 0, x: "15%", rotate: 0 }}
-          animate={{ opacity: 1, x: "-10%", rotate: -25 }}
-          transition={{ ease: "easeInOut", duration: 0.6, delay: 0.6 }}
-        >
-          <img src={heroData[index].img} alt="Nike" />
-        </motion.div>
-
-        <div className="title">
-          <motion.img
-            src={heroData[index].highlightImg}
-            alt="Lacoste"
-            key={`title2-${index}`}
-            initial={{ opacity: 0, y: "-15%", x: "-50%" }}
-            animate={{ opacity: 0.4, y: "-50%", x: "-50%" }}
-            transition={{ ease: "easeInOut", duration: 0.6, delay: 0.2 }}
-          />
-
+    <section className="hero">
+      <div className="hero-container">
+        <div className="slides">
           <motion.div
-            className="circle"
-            key={`circle-${index}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            transition={{ ease: "easeInOut", duration: 0.3 }}
-          ></motion.div>
+            className="img"
+            key={`img-${index}`}
+            initial={{ opacity: 0, x: "15%", rotate: 0 }}
+            animate={{ opacity: 1, x: "-10%", rotate: -25 }}
+            transition={{ ease: "easeInOut", duration: 0.6, delay: 0.6 }}
+          >
+            <img src={heroData[index].img} alt="Nike" />
+          </motion.div>
+
+          <div className="title">
+            <motion.img
+              src={heroData[index].highlightImg}
+              alt="Lacoste"
+              key={`title2-${index}`}
+              initial={{ opacity: 0, y: "-15%", x: "-50%" }}
+              animate={{ opacity: 0.4, y: "-50%", x: "-50%" }}
+              transition={{ ease: "easeInOut", duration: 0.6, delay: 0.2 }}
+            />
+
+            <motion.div
+              className="circle"
+              key={`circle-${index}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              transition={{ ease: "easeInOut", duration: 0.3 }}
+            ></motion.div>
+          </div>
         </div>
+
+        <div className="newsbar">
+          <div className="lines line1">
+            <p>Nike</p>
+            <p>Addidas</p>
+            <p>Converse</p>
+            <p>Lacoste</p>
+            <p>Gucci</p>
+          </div>
+
+          <div className="lines line2">
+            <p>Running</p>
+            <p>Sneakers</p>
+            <p>Golf</p>
+            <p>Walking</p>
+            <p>Soccer</p>
+          </div>
+        </div>
+
+        <div className="blending"></div>
       </div>
-
-      <div className="newsbar">
-        <div className="lines line1">
-          <p>Nike</p>
-          <p>Addidas</p>
-          <p>Converse</p>
-          <p>Lacoste</p>
-          <p>Gucci</p>
-        </div>
-
-        <div className="lines line2">
-          <p>Running</p>
-          <p>Sneakers</p>
-          <p>Golf</p>
-          <p>Walking</p>
-          <p>Soccer</p>
-        </div>
-      </div>
-
-      <div className="blending"></div>
-    </div>
+    </section>
   );
 };
 
