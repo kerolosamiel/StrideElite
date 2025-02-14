@@ -163,7 +163,7 @@
   padding: 1em;
 }
 
-.navbar-container .nav-Links .nav-icons .fav-cont .fav .fav-product {
+.navbar-container .nav-Links .nav-icons .fav-cont .fav .save-product {
   display: flex;
   justify-content: space-between;
   gap: 1em;
@@ -173,17 +173,17 @@
   align-items: center;
 }
 
-.navbar-container .nav-Links .nav-icons .fav-cont .fav .fav-product .info {
+.navbar-container .nav-Links .nav-icons .fav-cont .fav .save-product .info {
   display: flex;
   gap: 1em;
 }
 
-.navbar-container .nav-Links .nav-icons .fav-cont .fav .fav-product .img {
+.navbar-container .nav-Links .nav-icons .fav-cont .fav .save-product .img {
   background: #fff;
   width: 6.25em;
 }
 
-.navbar-container .nav-Links .nav-icons .fav-cont .fav .fav-product .text-box {
+.navbar-container .nav-Links .nav-icons .fav-cont .fav .save-product .text-box {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -194,7 +194,7 @@
   .nav-icons
   .fav-cont
   .fav
-  .fav-product
+  .save-product
   .text-box
   h3 {
   font-size: 1.3em;
@@ -205,7 +205,7 @@
   .nav-icons
   .fav-cont
   .fav
-  .fav-product
+  .save-product
   .text-box
   .price
   p:nth-child(1) {
@@ -220,7 +220,7 @@
   .nav-icons
   .fav-cont
   .fav
-  .fav-product
+  .save-product
   .text-box
   .price
   p.discount {
