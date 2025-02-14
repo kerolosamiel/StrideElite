@@ -7,6 +7,7 @@ import data from "../db/data";
 import "./public.css";
 import "./responsive.css";
 import ProductsBox from "../components/ProductsBox/ProductsBox";
+import NoProducts from "../components/NoProducts/NoProducts";
 
 const NavBar = ({ activeLink, handleActiveLink, saveIDs }) => {
   // Define navigation links with their respective destinations
@@ -80,11 +81,15 @@ const NavBar = ({ activeLink, handleActiveLink, saveIDs }) => {
               <div className="fav-cont">
                 <GoHeart />
                 <div className="fav">
-                  <ProductsBox
-                    products={favProducts}
-                    ids={saveIDs}
-                    icon={<IoMdCart />}
-                  />
+                  {favProducts(saveIDs).length > 0 ? (
+                    <ProductsBox
+                      products={favProducts}
+                      ids={saveIDs}
+                      icon={<IoMdCart />}
+                    />
+                  ) : (
+                    <NoProducts />
+                  )}
                 </div>
               </div>
               <Link to="cart" onClick={() => handleActiveLink("cart")}>
